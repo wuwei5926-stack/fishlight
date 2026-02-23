@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微光工坊 | GlowDecor - 深海夜光装饰</title>
+    <meta name="description" content="沉浸式深海夜光装饰体验，为你的空间带来梦幻般的光芒">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 深海背景效果 -->
+    <div class="ocean-bg"></div>
+    <div class="light-rays"></div>
+    <div class="bubbles-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- 顶部导航 -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <button class="mobile-menu-btn" aria-label="菜单">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="/" class="logo">
+                    <div class="logo-icon">✨</div>
+                    <span class="logo-text">微光工坊</span>
+                </a>
+
+                <nav class="desktop-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item has-dropdown">
+                            <a href="#products">产品系列 <span class="dropdown-arrow">▼</span></a>
+                            <div class="dropdown-menu">
+                                <a href="#">鱼缸夜光</a>
+                                <a href="#">盆栽伴侣</a>
+                                <a href="#">充电灯具</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#experience">沉浸体验</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#story">品牌故事</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact">联系我们</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="icon-btn" aria-label="搜索">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="收藏">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn cart-btn" aria-label="购物车">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主视觉区 -->
+    <section class="hero-section">
+        <!-- 视频背景 -->
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="videos/hero-bg.mp4" type="video/mp4">
+                <!-- 备用：如果视频加载失败，显示渐变背景 -->
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+        
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="glow-orb glow-orb-3"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>✨</span>
+                    <span>沉浸式夜光体验</span>
+                </div>
+                <h1 class="hero-title">点亮你的深海梦境</h1>
+                <p class="hero-subtitle">每一束微光，都是来自深海的温柔问候<br>让夜光装饰为你的空间带来梦幻般的氛围</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary">探索产品</a>
+                    <a href="#experience" class="btn btn-secondary">沉浸体验</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">夜光产品</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">满意用户</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">用户评分</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section id="products" class="products-showcase">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Products</span>
+                <h2 class="section-title">深海夜光系列</h2>
+                <p class="section-subtitle">每一件作品都蕴含着深海的神秘与温柔，为你的空间带来独特的光影魅力</p>
+            </div>
+            <div class="products-grid">
+                <!-- 产品1 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <div class="product-icon">🪼</div>
+                        <span class="product-badge">新品</span>
+                        <button class="product-wishlist">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">梦幻发光水母</h3>
+                        <p class="product-desc">仿生设计，柔和蓝光</p>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">¥128</span>
+                                <span class="price-original">¥168</span>
+                            </div>
+                            <button class="btn-add">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品2 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <div class="product-icon">🧚</div>
+                        <span class="product-badge">热销</span>
+                        <button class="product-wishlist">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">夜光精灵伴侣</h3>
+                        <p class="product-desc">守护你的绿植时光</p>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">¥68</span>
+                            </div>
+                            <button class="btn-add">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品3 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <div class="product-icon">🪸</div>
+                        <button class="product-wishlist">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">七彩珊瑚礁</h3>
+                        <p class="product-desc">渐变色彩，梦幻光影</p>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">¥198</span>
+                                <span class="price-original">¥258</span>
+                            </div>
+                            <button class="btn-add">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品4 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <div class="product-icon">🐚</div>
+                        <span class="product-badge">限量</span>
+                        <button class="product-wishlist">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">月光贝壳灯</h3>
+                        <p class="product-desc">USB充电，触摸开关</p>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">¥158</span>
+                            </div>
+                            <button class="btn-add">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品分类 -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Categories</span>
+                <h2 class="section-title">探索系列</h2>
+                <p class="section-subtitle">三大主题系列，满足你对夜光装饰的所有想象</p>
+            </div>
+            <div class="categories-grid">
+                <a href="#" class="category-card scroll-reveal">
+                    <div class="category-icon-wrap">🐠</div>
+                    <h3>深海鱼缸系列</h3>
+                    <p>水母、珊瑚、海星等海洋元素，为你的水族箱增添神秘光彩</p>
+                </a>
+                <a href="#" class="category-card scroll-reveal">
+                    <div class="category-icon-wrap">🪴</div>
+                    <h3>森林盆栽系列</h3>
+                    <p>精灵、蘑菇、萤火虫等森林元素，守护你的绿色空间</p>
+                </a>
+                <a href="#" class="category-card scroll-reveal">
+                    <div class="category-icon-wrap">🔮</div>
+                    <h3>星空宇宙系列</h3>
+                    <p>星球、月亮、星座等宇宙元素，打造私人星空</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 沉浸体验 -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Experience</span>
+                <h2 class="section-title">沉浸体验</h2>
+                <p class="section-subtitle">不同场景，同样的梦幻氛围</p>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card scroll-reveal">
+                    <div class="experience-visual">
+                        <div class="experience-icon">🌙</div>
+                    </div>
+                    <div class="experience-content">
+                        <h3>卧室梦境</h3>
+                        <p>柔和的夜光陪伴你入眠，不刺眼、不打扰，恰到好处的温柔光芒，让每一晚都如梦似幻。</p>
+                        <a href="#" class="link-arrow">了解更多 →</a>
+                    </div>
+                </div>
+                <div class="experience-card scroll-reveal">
+                    <div class="experience-visual">
+                        <div class="experience-icon">🌿</div>
+                    </div>
+                    <div class="experience-content">
+                        <h3>工作治愈</h3>
+                        <p>桌面上的小确幸，缓解视觉疲劳，在忙碌的工作中为你带来一丝宁静与治愈。</p>
+                        <a href="#" class="link-arrow">了解更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌故事 -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Story</span>
+                <h2 class="section-title">品牌故事</h2>
+            </div>
+            <div class="story-content">
+                <div class="story-text scroll-reveal">
+                    <p>我们相信，光不仅仅是照明，更是一种情感的传递。微光工坊诞生于对深海神秘世界的向往，每一款产品都凝聚着对美好生活的追求。采用环保材质，手工精心制作，让每一束微光都能温暖你的心灵。</p>
+                    <a href="#" class="btn btn-glow">了解更多</a>
+                </div>
+                <div class="features-row">
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">🌿</div>
+                        <span class="feature-label">环保材质</span>
+                    </div>
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">✋</div>
+                        <span class="feature-label">手工制作</span>
+                    </div>
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">💧</div>
+                        <span class="feature-label">防水设计</span>
+                    </div>
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">🛡️</div>
+                        <span class="feature-label">安全认证</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <div class="logo-icon">✨</div>
+                        <span class="logo-text">微光工坊</span>
+                    </a>
+                    <p class="footer-desc">沉浸式夜光装饰体验，为你的空间带来梦幻般的光芒。每一束微光，都是来自深海的温柔问候。</p>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">📷</a>
+                        <a href="#">🎵</a>
+                        <a href="#">📺</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>产品系列</h4>
+                    <ul>
+                        <li><a href="#">深海鱼缸</a></li>
+                        <li><a href="#">森林盆栽</a></li>
+                        <li><a href="#">星空宇宙</a></li>
+                        <li><a href="#">限定款</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">配送说明</a></li>
+                        <li><a href="#">退换政策</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">设计理念</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">商务合作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 微光工坊 GlowDecor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微光工坊 - 后台管理</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>✨ 微光工坊</h1>
+                <p>后台管理系统</p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                    <span class="icon">📊</span>
+                    <span>概览</span>
+                </a>
+                <a href="#images" class="nav-item" data-section="images">
+                    <span class="icon">🖼️</span>
+                    <span>图片管理</span>
+                </a>
+                <a href="#videos" class="nav-item" data-section="videos">
+                    <span class="icon">🎬</span>
+                    <span>视频管理</span>
+                </a>
+                <a href="#products" class="nav-item" data-section="products">
+                    <span class="icon">📦</span>
+                    <span>产品管理</span>
+                </a>
+                <a href="#settings" class="nav-item" data-section="settings">
+                    <span class="icon">⚙️</span>
+                    <span>设置</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../index.html" target="_blank" class="view-site">
+                    <span>🌐</span> 查看网站
+                </a>
+            </div>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 顶部栏 -->
+            <header class="top-bar">
+                <h2 id="page-title">概览</h2>
+                <div class="user-info">
+                    <span>管理员</span>
+                    <button class="logout-btn">退出</button>
+                </div>
+            </header>
+
+            <!-- 内容区域 -->
+            <div class="content-wrapper">
+                <!-- 概览页面 -->
+                <section id="dashboard-section" class="content-section active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">🖼️</div>
+                            <div class="stat-info">
+                                <h3 id="image-count">0</h3>
+                                <p>图片数量</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🎬</div>
+                            <div class="stat-info">
+                                <h3 id="video-count">0</h3>
+                                <p>视频数量</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📦</div>
+                            <div class="stat-info">
+                                <h3>6</h3>
+                                <p>产品数量</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">💾</div>
+                            <div class="stat-info">
+                                <h3 id="storage-used">0 MB</h3>
+                                <p>已用存储</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h3>快捷操作</h3>
+                        <div class="action-buttons">
+                            <button class="action-btn" onclick="showSection('images')">
+                                <span>➕</span> 上传图片
+                            </button>
+                            <button class="action-btn" onclick="showSection('videos')">
+                                <span>➕</span> 上传视频
+                            </button>
+                            <button class="action-btn" onclick="showSection('products')">
+                                <span>✏️</span> 编辑产品
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 图片管理 -->
+                <section id="images-section" class="content-section">
+                    <div class="section-header">
+                        <h3>图片管理</h3>
+                        <div class="upload-area" id="image-upload-area">
+                            <input type="file" id="image-input" accept="image/*" multiple hidden>
+                            <div class="upload-placeholder">
+                                <span class="upload-icon">📤</span>
+                                <p>点击或拖拽图片到此处上传</p>
+                                <small>支持 JPG、PNG、GIF、WebP 格式</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-bar">
+                        <select id="image-filter">
+                            <option value="all">全部图片</option>
+                            <option value="products">产品图</option>
+                            <option value="hero">横幅图</option>
+                            <option value="gallery">画廊图</option>
+                        </select>
+                        <input type="text" id="image-search" placeholder="搜索图片...">
+                    </div>
+
+                    <div class="media-grid" id="image-grid">
+                        <!-- 图片列表将动态生成 -->
+                    </div>
+                </section>
+
+                <!-- 视频管理 -->
+                <section id="videos-section" class="content-section">
+                    <div class="section-header">
+                        <h3>视频管理</h3>
+                        <div class="upload-area" id="video-upload-area">
+                            <input type="file" id="video-input" accept="video/*" hidden>
+                            <div class="upload-placeholder">
+                                <span class="upload-icon">🎬</span>
+                                <p>点击或拖拽视频到此处上传</p>
+                                <small>支持 MP4、WebM 格式，建议大小不超过 50MB</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list" id="video-list">
+                        <!-- 视频列表将动态生成 -->
+                    </div>
+                </section>
+
+                <!-- 产品管理 -->
+                <section id="products-section" class="content-section">
+                    <div class="section-header">
+                        <h3>产品管理</h3>
+                        <button class="btn-primary" onclick="addNewProduct()">
+                            <span>➕</span> 添加产品
+                        </button>
+                    </div>
+
+                    <div class="products-table-wrapper">
+                        <table class="products-table">
+                            <thead>
+                                <tr>
+                                    <th>产品图</th>
+                                    <th>名称</th>
+                                    <th>分类</th>
+                                    <th>价格</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="products-tbody">
+                                <!-- 产品列表将动态生成 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 设置 -->
+                <section id="settings-section" class="content-section">
+                    <div class="settings-form">
+                        <h3>网站设置</h3>
+                        
+                        <div class="form-group">
+                            <label>网站标题</label>
+                            <input type="text" id="site-title" value="微光工坊 | GlowDecor">
+                        </div>
+
+                        <div class="form-group">
+                            <label>网站描述</label>
+                            <textarea id="site-description" rows="3">沉浸式深海夜光装饰体验，为你的空间带来梦幻般的光芒</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>首页视频</label>
+                            <select id="hero-video-select">
+                                <option value="">不使用视频</option>
+                                <!-- 视频选项将动态生成 -->
+                            </select>
+                            <small>选择首页横幅背景视频</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>主题颜色</label>
+                            <div class="color-picker">
+                                <input type="color" id="primary-color" value="#00d9ff">
+                                <span>主色调</span>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button class="btn-secondary" onclick="resetSettings()">重置</button>
+                            <button class="btn-primary" onclick="saveSettings()">保存设置</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- 图片预览模态框 -->
+    <div class="modal" id="preview-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="preview-image" src="" alt="预览">
+            <div class="modal-actions">
+                <button class="btn-secondary" onclick="deleteCurrentImage()">删除</button>
+                <button class="btn-primary" onclick="copyImagePath()">复制路径</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 产品编辑模态框 -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content product-modal-content">
+            <span class="close-btn" onclick="closeProductModal()">&times;</span>
+            <h3 id="product-modal-title">编辑产品</h3>
+            <form id="product-form">
+                <div class="form-group">
+                    <label>产品图片</label>
+                    <div class="product-image-upload">
+                        <img id="product-preview" src="" alt="产品预览">
+                        <button type="button" class="btn-secondary" onclick="selectProductImage()">选择图片</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>产品名称</label>
+                    <input type="text" id="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label>产品分类</label>
+                    <select id="product-category">
+                        <option value="fish-tank">鱼缸夜光</option>
+                        <option value="plant">盆栽伴侣</option>
+                        <option value="lamp">充电灯具</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>产品价格</label>
+                    <input type="number" id="product-price" required>
+                </div>
+                <div class="form-group">
+                    <label>产品描述</label>
+                    <textarea id="product-desc" rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeProductModal()">取消</button>
+                    <button type="submit" class="btn-primary">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 提示消息 -->
+    <div class="toast" id="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
